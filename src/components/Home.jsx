@@ -42,10 +42,10 @@ const Home = () => {
       {filteredCountries.length > 0 ? (
         filteredCountries.map((country) => (
           <div key={country.Combined_Key}>
-            <h2>
+            <ul>
               <Link to={`/details/${country.Combined_Key}`}>{country.Admin2} {country.Country_Region}</Link>
-            </h2>
-            <p>Total: {country.Confirmed}</p>
+            <li>Total: {country.Confirmed}</li>
+            </ul>
           </div>
         ))
       ) : (
