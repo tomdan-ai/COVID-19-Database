@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { selectData } from '../redux/Home/homeSlice';
 
 const Details = () => {
@@ -14,6 +14,9 @@ const Details = () => {
 
   return (
     <div>
+      <Link to="/" style={{ textDecoration: 'none', marginBottom: '10px' }}>
+        {'<'} Back to Home
+      </Link>
       <h2>{country.Combined_Key}</h2>
       <p>Total Confirmed: {country.Confirmed}</p>
       <p>Total Deaths: {country.Deaths}</p>
