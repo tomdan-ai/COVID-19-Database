@@ -66,4 +66,14 @@ input {
 
 .stats {
   background-color: #1c1cbe;
+  color: #fff;
+  font-weight: 700;
+}
+
+.loading-container {
+  width: 96px;
+  height: 96px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }

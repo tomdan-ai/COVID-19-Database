@@ -2,18 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData, selectData, selectStatus } from '../redux/Home/homeSlice';
 import { Link } from 'react-router-dom';
-import bgGridImage from '../assets/Bg-grid.jpeg';
-import bgMainImage from '../assets/Bg-main.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import bgGridImage from '../assets/Bg-grid.jpeg';
+import bgMainImage from '../assets/Bg-main.jpeg';
+import { BounceLoader } from 'react-spinners';
+
 
 const Home = () => {
   const dispatch = useDispatch();
   const data = useSelector(selectData);
   const status = useSelector(selectStatus);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     dispatch(fetchData());
@@ -23,29 +24,36 @@ const Home = () => {
     setSearchTerm(e.target.value);
   };
 
-  const handleIconClick = () => {
-    setIsExpanded(true);
-  };
 
-  const filteredCountries = data.rawData
-    ? data.rawData.filter((country) => {
-        const searchTermLower = searchTerm.toLowerCase();
-        const countryRegionLower = country.Country_Region.toLowerCase();
-        return countryRegionLower.includes(searchTermLower);
-      })
-    : [];
+  const [isExpanded, setIsExpanded] = useState(false);
+      const handleIconClick = () => {
+        setIsExpanded(true);
+      };
 
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  }
 
+  const filteredCountries = data.rawData ? data.rawData.filter((country) => {
+    const searchTermLower = searchTerm.toLowerCase();
+    const countryRegionLower = country.Country_Region.toLowerCase();
+    return countryRegionLower.includes(searchTermLower);
+  }) : [];
+
+
+    if (status === 'loading') {
+      return (
+        <div className="loading-container">
+          <BounceLoader color="#fff" size={100} />
+        </div>
+      );
+    }
+    console.log(filteredCountries)
+    
   if (status === 'failed') {
     return <div>Error: Failed to fetch data</div>;
   }
 
   return (
     <div>
-      <nav>
+              <nav>
         <h1>COVID 19 METRIC DATA</h1>
 
         <FontAwesomeIcon icon={faMicrophone} size="lg" color="white" className='svg' />
@@ -71,7 +79,7 @@ const Home = () => {
         </div>
       </nav>
       <img src={bgGridImage} alt="BG-grid" className="img" />
-      <div className='stats'>STAT BY COUNTRY</div>
+      <div className='stats'>STATS BY COUNTRY</div>
       <div className="container">
         {filteredCountries.length > 0 ? (
           filteredCountries.map((country) => (
