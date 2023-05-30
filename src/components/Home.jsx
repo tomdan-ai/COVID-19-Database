@@ -17,11 +17,11 @@ const Home = () => {
     setSearchTerm(e.target.value);
   };
 
-  const filteredCountries = data.rawData.filter((country) => {
+  const filteredCountries = data.rawData ? data.rawData.filter((country) => {
     const searchTermLower = searchTerm.toLowerCase();
     const countryRegionLower = country.Country_Region.toLowerCase();
     return countryRegionLower.includes(searchTermLower);
-  });
+  }) : [];
 
   if (status === 'loading') {
     return <div>Loading...</div>;
@@ -39,9 +39,10 @@ const Home = () => {
         value={searchTerm}
         onChange={handleSearch}
       />
+      <div className='container'>
       {filteredCountries.length > 0 ? (
         filteredCountries.map((country) => (
-          <div key={country.Combined_Key}>
+          <div key={country.Combined_Key} className='list'>
             <ul>
               <Link to={`/details/${country.Combined_Key}`}>{country.Admin2} {country.Country_Region}</Link>
             <li>Total: {country.Confirmed}</li>
@@ -51,6 +52,7 @@ const Home = () => {
       ) : (
         <div>No matching countries found</div>
       )}
+      </div>
     </div>
   );
 };
