@@ -9,8 +9,6 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Music Tracks Website ](#-music-tracks-website-)
-  - [How to build the "Music Track" website](#how-to-build-the-music-track-website)
 - [Responsive website ](#responsive-website--)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -49,7 +47,7 @@ COVID-19 DATA is a React app that retrieves real-time COVID-19 records for all c
 <ul>
   <li><a href="https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/react_capstone.md">See the Project Requirement</a></li>
   <li>If required you should personalize the content of your page. Choose a topic that is different than the one in the original design</li>
-  <li><a href="">Walthrough Video</a></li>
+  <li><a href="https://drive.google.com/file/d/1weii3bnFh0g0VDKbnenYQFiUce4nCEr8/view?usp=sharing">Walthrough Video</a></li>
 
 **_API REQUIREMENTS_**
 
@@ -133,7 +131,7 @@ COVID-19 DATA is a React app that retrieves real-time COVID-19 records for all c
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://covid-metrics.onrender.com)
+[Live Demo Link](https://covid-19-metrics.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
