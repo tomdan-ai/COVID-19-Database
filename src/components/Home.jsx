@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData, selectData, selectStatus } from '../redux/Home/homeSlice';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import bgGridImage from '../assets/Bg-grid.jpeg';
-import bgMainImage from '../assets/Bg-main.jpeg';
-import { BounceLoader } from 'react-spinners';
+import { faMicrophone, faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import { BounceLoader } from 'react-spinners';
+import bgMainImage from '../assets/Bg-main.jpeg';
+import { fetchData, selectData, selectStatus } from '../redux/Home/homeSlice';
+import bgGridImage from '../assets/Bg-grid.jpeg';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -24,12 +23,10 @@ const Home = () => {
     setSearchTerm(e.target.value);
   };
 
-
   const [isExpanded, setIsExpanded] = useState(false);
-      const handleIconClick = () => {
-        setIsExpanded(true);
-      };
-
+  const handleIconClick = () => {
+    setIsExpanded(true);
+  };
 
   const filteredCountries = data.rawData ? data.rawData.filter((country) => {
     const searchTermLower = searchTerm.toLowerCase();
@@ -37,49 +34,47 @@ const Home = () => {
     return countryRegionLower.includes(searchTermLower);
   }) : [];
 
+  if (status === 'loading') {
+    return (
+      <div className="loading-container">
+        <BounceLoader color="#b5cde0" size={100} />
+      </div>
+    );
+  }
 
-    if (status === 'loading') {
-      return (
-        <div className="loading-container">
-          <BounceLoader color="#fff" size={100} />
-        </div>
-      );
-    }
-    console.log(filteredCountries)
-    
   if (status === 'failed') {
     return <div>Error: Failed to fetch data</div>;
   }
 
   return (
     <div>
-              <nav>
+      <nav>
         <h1>COVID 19 METRIC DATA</h1>
 
-        <FontAwesomeIcon icon={faMicrophone} size="lg" color="white" className='svg' />
+        <FontAwesomeIcon icon={faMicrophone} size="lg" color="white" className="svg" />
         <div className="search-container">
           {!isExpanded && (
-            <FontAwesomeIcon
-              icon={faSearch}
-              size="lg"
-              color="white"
-              className="search-icon"
-              onClick={handleIconClick}
-            />
+          <FontAwesomeIcon
+            icon={faSearch}
+            size="lg"
+            color="white"
+            className="search-icon"
+            onClick={handleIconClick}
+          />
           )}
           {isExpanded && (
-            <input
-              type="text"
-              placeholder="Search country..."
-              value={searchTerm}
-              onChange={handleSearch}
-              className="search-input"
-            />
+          <input
+            type="text"
+            placeholder="Search country..."
+            value={searchTerm}
+            onChange={handleSearch}
+            className="search-input"
+          />
           )}
         </div>
       </nav>
       <img src={bgGridImage} alt="BG-grid" className="img" />
-      <div className='stats'>STATS BY COUNTRY</div>
+      <div className="stats">STATS BY COUNTRY</div>
       <div className="container">
         {filteredCountries.length > 0 ? (
           filteredCountries.map((country) => (
@@ -90,9 +85,14 @@ const Home = () => {
             >
               <ul>
                 <Link to={`/details/${country.Combined_Key}`}>
-                  {country.Admin2} {country.Country_Region}
+                  {country.Admin2}
+                  {' '}
+                  {country.Country_Region}
                 </Link>
-                <li>Cases: {country.Confirmed}</li>
+                <li>
+                  Cases:
+                  {country.Confirmed}
+                </li>
               </ul>
             </div>
           ))

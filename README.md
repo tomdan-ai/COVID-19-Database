@@ -1,70 +1,231 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h3><b>COVID 19 DATA</b></h3>
+</div>
 
-## Available Scripts
+<h1>React Capstone Project</h1>
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Music Tracks Website ](#-music-tracks-website-)
+  - [How to build the "Music Track" website](#how-to-build-the-music-track-website)
+- [Responsive website ](#responsive-website--)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Tools ](#tools-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [Authors](#authors)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 COVID-19 DATA<a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+COVID-19 DATA is a React app that retrieves real-time COVID-19 records for all countries from an API. It provides essential statistics, such as confirmed cases and deaths, and offers search functionality for easy access to specific countries. The app features a user-friendly interface, loading indicators, and error handling. It is responsive and compatible with desktop and mobile devices. Stay informed with COVID-19 DATA.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How to build the "Space Travelers' Hub" website
 
-### `npm run build`
+- 1. Use React.js.
+- 2. Use React.js Hooks.
+- 3. Learn how to use proper ES6 syntax.
+- 4. Use Redux.
+- 5. Implementation of External API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Walk through <a name="walk-through"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<ul>
+  <li><a href="https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/react_capstone.md">See the Project Requirement</a></li>
+  <li>If required you should personalize the content of your page. Choose a topic that is different than the one in the original design</li>
+  <li><a href="">Walthrough Video</a></li>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**_API REQUIREMENTS_**
 
-### `npm run eject`
+  <li><a href="https://coronavirus.m.pipedream.net/">Covid-19 API</a></li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 Built With <a name="built-with"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**_feature-One_**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Imeplementation of Basic Framework linters error free.
+- Implementation of <a href="https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md">Gitflow</a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**_feature-two_**
 
-## Learn More
+- Implementation of <a href="https://create-react-app.dev/docs/getting-started">Create React App</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**_feature-three_**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Create a Covid-19 database for users to see realtime stats of covid-19
+- Choosing the <a href="https://coronavirus.m.pipedream.net/">API</a>
+- Choose text, icons, fonts.
+- Set up the repository and tools has been done in feature-one, and feature-two
 
-### Code Splitting
+### Tech Stack <a name="tech-stack"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<details>
+  <summary>Client Side / Front-End</summary>
+  <ul>
+    <li><a href="https://create-react-app.dev/">React.js</a></li>
+    <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
+  </ul>
+</details>
 
-### Analyzing the Bundle Size
+<details>
+  <summary>Server Side / Back-End</summary>
+  <ul>
+    <li><a href="https://render.com/">Render</a></li>
+  </ul>
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Tools <a name="tools"></a>
 
-### Making a Progressive Web App
+  <details>
+    <summary>Code Convention, Code Analysis</summary>
+      <ul>
+        <li><a href="https://eslint.org/">ESLint</a></li>
+        <li><a href="https://webhint.io/">Webhint</a></li>
+        <li><a href="https://stylelint.io/">Stylelint</a></li>
+        <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a></li>
+        <li><a href="https://www.npmjs.com/package/npm-check">node_modules checker</a></li>
+      </ul>
+  </details>
+  <details>
+    <summary>Version Control, CI/CD, Hosting Service</summary>
+      <ul>
+        <li><a href="https://render.com/">Render</a></li>
+        <li><a href="https://github.com/features/actions">Github Actions</a></li>
+        <li><a href="https://git-scm.com/">Git</a></li>
+      </ul>
+  </details>
+  <details>
+    <summary>IDE, Desktop Apps, Other Tools</summary>
+      <ul>
+        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+        <li><a href="https://desktop.git-scm.com/">Git Bash</a></li>
+      </ul>
+  </details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Key Features <a name="key-features"></a>
 
-### Advanced Configuration
+- Search country
+- Confirmed Cases
+- Total cases
+- Total death per country
+- Button Interactions
+- Attractive Images & Design
+- Dynamic page (data is retrieved from JSON file)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Live Demo Link](https://covid-metrics.onrender.com)
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+- git version 2.38.x
+- node.js version > 12.x
+- IDE
+- browser (chrome, firefox, edge, safari)
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my folder
+  git clone git@github.com:tomdan-ai/COVID-19-DATABASE.git
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  cd COVID-19-DATABASE
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm run start
+```
+
+### Run tests
+
+To run tests, run the following command:
+Run Github Actions Test
+
+```sh
+  npm run test
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is deployed at Render.com you can clone it here. [git@github.com:tomdan-ai/COVID-19-DATABASE.git]
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+
+👤 **Tom Daniel**
+
+- GitHub: [@tomdan-ai](https://github.com/tomdan-ai)
+- Twitter: [@TomUdoh1](https://twitter.com/TomUdoh1)
+- LinkedIn: [tomdaniel](https://www.linkedin.com/in/tomudoh)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Will add some background and beautification**
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/tomdan-ai/COVID-19-DATABASE/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project give a star to this repositiory.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank the Microverse full-stack curriculum for the inspiration and guidance.
+- Original design idea by <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance.</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is under [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -3,11 +3,9 @@ import homeReducer, { fetchData } from '../redux/Home/homeSlice';
 const mockData = [
 ];
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve(mockData),
-  })
-);
+global.fetch = jest.fn(() => Promise.resolve({
+  json: () => Promise.resolve(mockData),
+}));
 
 describe('homeSlice reducer', () => {
   it('should handle fetchData.pending', () => {
